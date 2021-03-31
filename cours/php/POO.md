@@ -170,7 +170,7 @@ $hero = new Character(100, 50);
 Une classe peut hériter des attributs (propriétés) et méthodes d'une autre classe. On parle de classe mère et classe fille (ou généralisation/spécialisation).
 Même si les méthodes sont héritées, il est possible de les redéfinir.
 
-```
+```php
 class Character
 {
     private int $hp;
