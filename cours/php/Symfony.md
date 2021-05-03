@@ -2,8 +2,25 @@
 
 Symfony est un framework PHP développé par la société française Sensiolabs.
 
+## Qu'est-ce qu'un framework ?
+
+Un framework s'apparente à une bibliothèque de fonctions mais va en plus proposer sa propre architecture.
+
 ## Liens utiles
 * [Doc de Symfony](https://symfony.com/doc/current/index.html)
+
+## Structure d'un projet
+
+* bin : outils à lancer en ligne de commande
+* config : configuration du site
+* migrations : requêtes pour créer/modifier la base de données
+* public : fichiers publics
+* src : code source php (contrôleurs, modèles, services...)
+* templates : affichage
+* tests : fichiers de tests
+* translations : traductions
+* var : cache/logs
+* vendor : bibliothèques externes
 
 ## Installation
 
