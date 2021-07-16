@@ -233,7 +233,7 @@ $counter = 1;
 while ($counter <= 10) {
     echo $counter;
     
-    $i++;
+    $counter++;
 }
 ```
 
@@ -247,7 +247,7 @@ $counter = 1;
 do {
     echo $counter;
     
-    $i++;
+    $counter++;
 } while ($counter <= 10);
 ```
 
