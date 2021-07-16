@@ -52,7 +52,7 @@ public function getLogDir()
 ## Créer une page
 
 1. Créer une route (une url)
-2. Créer une controller s'il n'existe pas encore
+2. Créer un contrôleur s'il n'existe pas encore
 3. Créer une méthode dans le contrôleur qui va être appelée lorsque l'on va sur l'url définie dans la route
 4. Créer un template s'il n'existe pas encore
 
