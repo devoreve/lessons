@@ -2,6 +2,10 @@
 
 ## Variables
 
+Les variables permettent de stocker des informations.
+
+### Syntaxe
+
 Pour déclarer une variable, on utilise le caractère "$".
 
 ```php
@@ -92,13 +96,30 @@ Les opérations sont les mêmes que d'habitude (+, -, *, /). Les raccourcis pour
 ```php
 <?php
 
+// Addition
 $number = 42 + 3;
-$number *= 2;
-$number += 3;
-$number--;
-$number++;
+$number = $number + 3;      // Peut également s'écrire $number += 3
+$number += 1;               // Peut également s'écrire $number++           
 
+// Multiplication
+$number = 5 * 2;
+$number = $number * 3;      // Peut également s'écrire $number *= 3
+
+// Soustraction
+$number = 5 - 2;
+$number = $number - 2;      // Peut également s'écrire $number -= 2
+$number -= 1;               // Peut également s'écrire $number--
+
+// Division
+$number = 4 / 2;
+$number = $number / 2;      // Peut également s'écrire $number /= 2
+
+// Modulo (reste de la division entière)
+$modulo = 10 % 3;           // Résultat : 1 (10 / 3 = 3 et il reste 1)
+$modulo = 4 % 2;            // Résultat : 0 (4 / 2 = 2 et il reste 0)
 ```
+
+*NB : Les raccourcis "++" et "--" permettent respectivement d'augmenter de 1 et de retrancher de 1. Il n'existe pas de tels raccourcis pour les autres opérations.*
 
 ### Les tableaux (array)
 Comme en JavaScript et dans d'autres langages, on déclare les tableaux comme ceci en PHP : 
@@ -174,6 +195,8 @@ $user = [
 
 ### Conditions
 
+Les conditions permettent de réaliser une ou plusieurs actions en fonction d'une condition.
+
 #### If
 
 ```php
@@ -222,6 +245,8 @@ switch ($age) {
 ```
 
 ### Boucles
+
+Les boucles vont permettre de répéter des instructions tant qu'une condition sera vraie.
 
 #### While
 
@@ -311,6 +336,12 @@ foreach ($fruits as $fruit) {
 
 ## Fonctions
 
+Les fonctions sont des blocs de code réutilisables. Pour être appelée, une fonction doit être déclarée.
+
+### Syntaxe
+
+Déclaration d'une fonction
+
 ```php
 <?php
 
@@ -331,11 +362,47 @@ function maximum(int $a, int $b): int
 }
 ```
 
-Le type des paramètres et de la valeur de retour ne sont pas obligatoires mais recommandés.
+*NB : Le type des paramètres et de la valeur de retour ne sont pas obligatoires mais recommandés.*
+
+Appel de la fonction créée
+
+```php
+$max = maximum(5, 10);
+var_dump($max);         // Affiche 10
+```
+
+### Portée des variables
+
+Contrairement au JavaScript, une variable déclarée en-dehors de la fonction ne pourra pas être utilisée. 
+
+```php
+$name = 'Toto';
+
+function hello()
+{
+    echo "Bonjour " . $name;     // Erreur : la variable $name n'est pas reconnue
+}
+
+hello();
+```
+
+Le mot-clé *global* peut être utilisé pour palier ce problème. Toutefois il est recommandé d'éviter le plus possible les variables globales.
+Il vaut mieux passer par des paramètres dans ce cas-là.
+
+```php
+$name = 'Toto';
+
+function hello(string $name): void
+{
+    echo "Bonjour " . $name;
+}
+
+hello($name);
+```
 
 ### Arguments (paramètres) passés par valeur ou par référence
 
-* Par valeur : on passe à la fonction une copie de la donnée originale => on ne modifie pas l'original
+* Par valeur : on passe à la fonction une copie de la donnée originale => on ne modifie pas l'original (comportement par défaut des paramètres dans les fonctions)
 * Par référence : on passe à la fonction la donnée originale => toute modification entraîne un changement sur l'original
 
 Exemple : 
