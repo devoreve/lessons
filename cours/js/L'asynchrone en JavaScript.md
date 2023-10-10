@@ -116,7 +116,7 @@ function recupereUtilisateur(numeroCommentaire) {
 recupereUtilisateur(2);
 ```
 
-Dans cet exemple, nous avons trois opérations asynchrones et chacune d'entre elles prend un callback qui sera appelé lorsque l'opération est terminée.
+Dans cet exemple, nous avons trois opérations asynchrones et chacune d'entre elles prend une fonction de rappel qui sera appelée lorsque l'opération est terminée.
 
 Le code principal montre comment ces opérations sont enchaînées les unes après les autres à l'intérieur des callbacks, créant ainsi une structure de code en forme de pyramide. Plus vous ajoutez d'opérations asynchrones imbriquées, plus le code devient difficile à lire et à comprendre.
 
