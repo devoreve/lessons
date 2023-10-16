@@ -1,6 +1,8 @@
 # L'asynchrone en JavaScript
 
-## Définitions
+## Introduction
+
+Commençons par quelques définitions sur des notions qui peuvent paraître un peu obscures puis regardons dans quels cas on peut parler d'asynchrone en JavaScript.
 
 ### Qu'est-ce que l'asynchrone ?
 
@@ -14,7 +16,7 @@ Un traitement asynchrone est une opération ou une tâche qui est effectuée de 
 
 Ajax (Asynchronous Javascript And XML) est une technique de programmation web qui permet de communiquer avec un serveur en arrière-plan, sans avoir besoin de recharger la page entière. Elle permet de récupérer ou d'envoyer des données au serveur de manière asynchrone, ce qui signifie que les mises à jour de la page peuvent se faire en temps réel sans interrompre l'expérience de l'utilisateur. Ajax est souvent utilisé pour créer des applications web interactives et réactives. Bien qu'il ait "XML" dans son nom, il peut être utilisé avec d'autres formats de données, tels que JSON.
 
-## Quelques exemples de tâches asynchrones
+### Quelques exemples de tâches asynchrones
 
 * AJAX (XMLHttpRequest ou Fetch API) : l'envoi de requêtes HTTP asynchrones vers un serveur pour récupérer des données ou envoyer des données est une opération asynchrone courante
 * setTimeout et setInterval : ces fonctions permettent de planifier l'exécution de code après un délai donné (setTimeout) ou à intervalles réguliers (setInterval)
@@ -272,7 +274,7 @@ async function recupereUtilisateur(numeroCommentaire) {
 
 ## En résumé
 
-* les traitements asynchrones sont des opérations effectuées au bout d'un certain temps
-* une fonction de rappel dans les traitements asynchrones sont exécutées avec un délai
+* les traitements asynchrones sont des opérations effectuées au bout d'un certain temps et ne bloquent pas l'application
+* une fonction de rappel dans les traitements asynchrones est exécutée avec un délai
 * les promesses permettent d'encapsuler les tâches asynchrones et de les gérer plus facilement
 * la syntaxe *async/await* permet d'écrire le code comme s'il était synchrone (et donc s'effectuer de haut en bas)
